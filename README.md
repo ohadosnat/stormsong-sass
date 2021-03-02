@@ -1,11 +1,15 @@
-# Welcome to Stormsong Valley
-As my learning journey continues, I started learning about Sass and how powerful it can be.
-Instead of making an ugly demo page and copying what I'm seeing on the video, I decided to make my learning experince more fun, and design my own project!
-So I opened Figma and designed this simple website about **Stormsong Valley** which is a place from the video game **World of Warcraft**.
-_If you didn't figure by my username I'm a WoW player_
+# Welcome to Stormsong Valley!
+As my learning journey continues, I started learning about Sass and how powerful it can be. <br>
+After watching a batch of videos, I decided to practice what I've learned. <br>
+I had two options here. <br>
+1. To follow along with a tutorial.
+2. To go wild and create something from my head. <br>
+_Spoiler alert: I went with the second_ <br>
+So I opened Figma and designed a simple website about Stormsong Valley (a place from World of Warcraft). <br>
 
-It's not perfect, but it's better than nothing. So, if you got any feedback/suggestions about my code, please feel free to contact me and help me be a better developer!
+It's not perfect, but it's better than nothing. <br>
+**Any feedback, suggestions, tips on how to improve my code is more than welcome!** <br>
 
-Anyway, That's all, See you next time! :smile:
--The Beautiful Tauren :cow:
-[Me, A Tauren wearing a tuxcedo and holding a rose in my month since I'm romantic] (img)
+That's all for today! See you next time! <br>
+-The Beautiful Tauren :cow: <br>
+![Me, A Tauren wearing a tuxedo and holding a rose in my mouth since I'm romantic](https://user-images.githubusercontent.com/79900761/109689552-13a3b380-7b8e-11eb-9e1f-59ef8e9ae55f.jpg)
