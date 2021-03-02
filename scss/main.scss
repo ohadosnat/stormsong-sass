@@ -1,0 +1,53 @@
+@import 'config', 'home', 'menu', 'story', 'activities', 'visit';
+
+// Mobile Global Classes - Text, Header, Links, Main
+body {
+    background: $bg-color;
+    height: 100vh;
+    color: set-text-color($bg-color);
+    font-family: Roboto;
+    line-height: 1.2;
+}
+
+h1, h2 {
+    font-weight: $font-md;
+}
+
+h1 {
+    margin-bottom: 5px;
+    font-size: $font-size-h1;
+}
+
+h2 {
+    font-size: $font-size-h2;
+}
+
+h3 {
+    font-weight: $font-regular;
+    font-size: $font-size-h3;
+}
+
+p {
+    font-size: $font-size-p;
+}
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+a {
+    color: set-text-color($bg-color);
+    text-decoration: none;
+}
+.auto-body {
+    height: auto;
+}
+
+// Articles' Second Section
+.sc-second {
+    padding: 20px 20px 30px;
+    line-height: 1.5;
+}
+
+@import 'responsive';

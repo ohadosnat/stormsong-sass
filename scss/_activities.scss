@@ -1,0 +1,37 @@
+.activities {
+    .sc-first {
+        background: $gradient, $bg-activities-img;
+        @include first-section;
+    }
+    .sc-second {
+        p {
+            padding-bottom: 20px;
+            margin: 5px 0 20px;
+            border-bottom: 1px solid $primary-color;
+        }
+
+        .last-elem {
+            padding-bottom: 0;
+            border: none;
+            margin-bottom: 0;
+        }
+    }
+    .things-to-try {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        @extend p;
+
+        &_wrapper {
+            margin-right: 15px;
+        }
+
+        p {
+            @extend .last-elem;
+        }
+        
+        img {
+            width: 30%;
+        }
+     }   
+}

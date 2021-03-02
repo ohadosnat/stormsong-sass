@@ -1,0 +1,102 @@
+// Colors
+$primary-color: #FF7A00;
+$bg-color: #101409;
+$menu-dot-color: #FFC896;
+$gradient: linear-gradient(0deg, rgba(#000, 0.3), rgba(#000, 0));
+$green-overlay-gradient: linear-gradient(0deg, rgba(#101409, 0.9), rgba(#101409, 0.9));
+$black-light-overlay: linear-gradient(0deg, rgba(#000, 0.3), rgba(#000, 0.3));
+$desktop-gradient: linear-gradient(270deg, rgba(#000, 0.052), rgba(#000, 0.4)96%);
+
+// Fonts
+$font-regular: normal; // regular font weight
+$font-md: 500; // medium font weight
+$font-size-h1: 1.8rem;
+$font-size-h2: 1.3rem;
+$font-size-h3: 1.1rem;
+$font-size-p: 1rem;
+$font-size-menu: 1.2rem;
+
+// Background Imgs
+$bg-home-img: url(../img/bg_home.jpg);
+$bg-story-img: url(../img/bg_story.jpg);
+$bg-activities-img: url(../img/bg_activities.jpg);
+$bg-visit-img: url(../img/bg_visit.jpg);
+
+// Reset
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+// Mixins and Functions
+
+@mixin bg-img-select ($gradient, $img) {
+    background: $gradient,$img;
+}
+
+// transition global settings
+@mixin transition-ease { 
+    transition: all 500ms ease-in-out;    
+}
+// text color based on bg color
+@function set-text-color($color) { 
+    @if (lightness($color) > 40%) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+// background settings
+@mixin set-bg-img { 
+    background-position: 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+// Upper Section Mixin
+@mixin first-section {
+    @include set-bg-img;
+    height: 350px;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    padding-bottom: 30px;
+}
+// Main Mixin
+@mixin main {
+    padding: 0 20px 30px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+
+// Media Queries Mixins
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @mixin media-lg {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+  @mixin media-xl {
+    @media screen and (min-width: 1250px) {
+      @content;
+    }
+  }
+
+  // for lg+ screens - home & visit pages.
+  @mixin center-content {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: -120px;
+    padding: 0;
+}

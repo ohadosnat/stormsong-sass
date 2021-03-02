@@ -1,0 +1,213 @@
+@include media-md {
+    body {
+        overflow: hidden;
+    }
+    .auto-body {
+        overflow: overlay;
+        background: $green-overlay-gradient, $bg-story-img;
+        @include set-bg-img;
+    }
+
+    .activities-bg-div {
+        overflow: overlay;
+        background: $green-overlay-gradient, $bg-activities-img;
+        @include set-bg-img;
+    }
+
+    header {
+        position: relative;
+        margin: 1rem 0 3rem;
+    }
+    .menu-btn {
+        visibility: hidden;
+    }
+    .nav {
+        position: relative;
+        visibility: visible;
+        background: transparent;
+        
+        .menu-nav {
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+            background: transparent;
+            text-align: center;
+
+            &_item {
+                display: inline;
+                padding-right: 1.5rem;
+            }
+            &_link {
+                font-size: $font-size-menu;
+            }
+        }
+    }
+    .home-content {
+        right: 0;
+        left: 0;
+    }
+    .headline-wrapper {
+        width: 500px;
+    }
+    .yt-embed {
+        width: 500px;
+    }
+    .story, .activities {
+        height: 100%;
+        text-align: center;
+        .sc-first {
+            height: auto;
+            display: block;
+            background: none;
+            margin: 0;
+            padding: 0;
+        }
+        .sc-second {
+            padding: 0px 50px 50px;
+
+            .map-img {
+                width: 80%;
+            }
+            .quote-text {
+                border-top: 1px solid $primary-color;
+                padding-top: 10px;
+                border-left: none;
+                font-size: $font-size-h2 + 0.1rem;
+            }
+        }
+        .headline-wrapper {
+            width: 50%;
+            margin: 0 auto 10px;
+        }
+    }
+    .activities {
+        .things-to-try {
+            align-items: center;
+            img {
+                width: 23%;
+            }
+        }
+    }
+    .visit-body {
+        main {
+            right: 0;
+            left: 0;
+            img {
+                width: 500px;
+            }
+        } 
+    }
+}
+
+@include media-lg {
+    .home-body {
+        .home-content {
+
+            @include center-content;
+        }
+    }
+    .visit-body > main {
+        @include center-content;
+    }
+
+    .story, .activities {
+        width: 75%;
+        margin: 0 auto;
+
+        .sc-second {
+            padding: 0px 0px 50px;
+        }
+    }
+}
+
+@include media-xl {
+    #activities-body {
+        height: 100vh;
+        overflow: hidden;
+    }
+    .home-body {
+        @include bg-img-select($desktop-gradient, $bg-home-img);
+        @include set-bg-img;
+
+        .headline-wrapper {
+            transform: scale(1.1);
+            line-height: 1.5;
+            position: absolute;
+            left: 120px;
+            bottom: 100px;
+            margin: 0;
+            width: 380px;
+            h3 {
+                margin-bottom: -5px;
+            }
+            h1 {
+                display: inline-block;
+                border-bottom: 1px solid $primary-color;
+            }
+        
+        }
+        .yt-embed {
+            position: absolute;
+            right: 100px;
+            margin: 0;
+            width: 700px;
+            height: 400px;
+            box-shadow: 0px 0px 10px rgba(0,0,0, 0.6);
+        }
+    }
+
+
+    .visit-body {
+        @include bg-img-select($desktop-gradient, $bg-visit-img);
+        @include set-bg-img;
+    }
+    .story, .activities {
+        width: 50%;
+    }
+    .activities-bg-div {
+        height: 100vh;
+        overflow: auto;
+    }
+    .activities {
+        height: auto;
+        .sc-second {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 15px;
+            grid-row-gap: 0px;
+            padding: 0;
+        }
+        #grid-1 {
+            grid-area: 1 / 1 / 2 / 4;
+        }
+        .things-to-try {
+            align-items: center;
+            grid-area: 2 / 1 / 3 / 4;
+            &_wrapper {
+                margin-right: 15px;
+            }
+            img {
+                width: 15%;
+            }
+        }
+        #grid-3 {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+        #grid-4 {
+            grid-area: 3 / 2 / 4 / 3;
+        }
+        #grid-5 {
+            grid-area: 3 / 3 / 4 / 4;
+        }
+        #grid-3, #grid-4, #grid-5 {
+            margin-top: 10px;
+            p {
+                padding-bottom: 0;
+                border: none;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}

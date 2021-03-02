@@ -1,0 +1,16 @@
+.visit-body {
+    background: $gradient, $bg-visit-img;
+    @include set-bg-img;
+    overflow: hidden;
+    main {
+        @include main;
+        img {
+            width: 100%;
+            @include transition-ease;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

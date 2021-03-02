@@ -1,0 +1,24 @@
+.home-body {
+    background: $gradient, $bg-home-img;
+    @include set-bg-img;
+
+    main {
+        @include main;
+    }
+}
+.headline-wrapper {
+    width: 80%;
+    margin: 0px auto 20px;
+    h1 {
+        display: inline-block;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $primary-color;
+    }
+
+}
+.yt-embed {
+    margin-top: 20px;
+    width: 90%;
+    height: 240px;
+    box-shadow: 0px 0px 10px rgba(0,0,0, 0.6);
+}
